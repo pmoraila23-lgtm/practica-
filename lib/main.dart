@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'boton_login.dart'; 
 
 void main() {
   runApp(const MainApp());
@@ -13,9 +14,18 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: BotonPersonalizado(
-            texto: 'Click Me',
-            onPressed: null, 
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              BotonPersonalizado(
+                texto: 'Click Me',
+                onPressed: null,
+              ),
+              SizedBox(height: 20), 
+              LoginButton(
+                onPressed: null,
+              ),
+            ],
           ),
         ),
       ),
@@ -23,7 +33,7 @@ class MainApp extends StatelessWidget {
   }
 }
 
-class BotonPersonalizado extends StatelessWidget{
+class BotonPersonalizado extends StatelessWidget {
   final String texto;
   final VoidCallback? onPressed;
 
@@ -44,7 +54,7 @@ class BotonPersonalizado extends StatelessWidget{
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF000000).withOpacity(0.2),
+              color: const Color(0xFF000000),
               offset: const Offset(0, 4),
               blurRadius: 6,
             ),
