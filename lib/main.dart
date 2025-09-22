@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
         body: Center(
           child: BotonPersonalizado(
             texto: 'Click Me',
-            onPressed: null, // Aquí puedes definir la función que se ejecutará al presionar el botón
+            onPressed: null, 
           ),
         ),
       ),
